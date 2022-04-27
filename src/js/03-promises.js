@@ -25,18 +25,16 @@ function createPromises() {
     amount: { value: amount },
   } = form;
 
-  setTimeout(() => {
-    for (let i = 1; i <= amount; i += 1) {
-      const stepDelay = +step * i + +step;
-      createPromise(i, stepDelay)
-        .then(({ position, delay }) => {
-          Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
-        })
-        .catch(({ position, delay }) => {
-          Notify.failure(`Rejected promise ${position} in ${delay}ms`);
-        });
-    }
-  }, delay);
+  for (let i = 0; i < amount; i += 1) {
+    const stepDelay = +delay + step * i;
+    createPromise(i + 1, stepDelay)
+      .then(({ position, delay }) => {
+        Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
+      })
+      .catch(({ position, delay }) => {
+        Notify.failure(`Rejected promise ${position} in ${delay}ms`);
+      });
+  }
 }
 
 form.addEventListener('submit', createPromises);
