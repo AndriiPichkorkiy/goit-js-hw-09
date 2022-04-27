@@ -31,8 +31,8 @@ function createPromises() {
     return;
   }
 
-  for (let i = 0; i < amount; i += 1) {
-    const stepDelay = +delay + step * i;
+  for (let i = 0; i < +amount; i += 1) {
+    const stepDelay = +delay + +step * i;
     createPromise(i + 1, stepDelay)
       .then(({ position, delay }) => {
         Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
