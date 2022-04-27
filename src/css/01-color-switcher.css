@@ -6,8 +6,27 @@ body {
   transform: translate(-50%, -50%);
 }
 
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  transform: translateY(2px);
+}
+
 button,
-p { 
+p {
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
