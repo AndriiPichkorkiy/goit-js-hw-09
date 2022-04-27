@@ -1,2 +1,2 @@
 body{background:linear-gradient(45deg,#1870ed,#f18f88);font-family:Montserrat,"sans-serif";min-height:100vh;align-items:center;justify-content:center;text-align:center;flex-direction:column}.timer,body{display:flex}.timer{margin-top:30px;margin-bottom:30px;background-color:#080808;border-radius:5px;padding:30px 20px;box-shadow:1px 1px 5px hsla(0,0%,100%,.15),0 15px 90px 30px rgba(0,0,0,.25);width:256px;min-width:90px}.value{color:#fff;font-size:2.2rem}.label,.value{text-transform:uppercase}.label{color:hsla(0,0%,100%,.35);font-size:.7rem;margin-top:10px}label{margin-right:0}p{display:inline-flex}button{margin-top:16px}
-/*# sourceMappingURL=/parcel-project-template/02-timer.402902b5.css.map */
+/*# sourceMappingURL=/goit-js-hw-09/02-timer.402902b5.css.map */
