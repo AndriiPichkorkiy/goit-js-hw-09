@@ -35,11 +35,15 @@ const timer = {
   },
 
   resetTimer() {
+    //stop setInterval
     clearInterval(this.indexForStoppingTimer);
+    //set 00:00:00:00 for clockFace
     for (const key in this.clockFace) {
       this.clockFace[key].innerHTML = '00';
     }
+    //clear input value
     calendar.clear();
+    
     inputDate.removeAttribute('disabled');
     buttonReset.setAttribute('disabled', '');
   },

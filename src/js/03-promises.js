@@ -25,6 +25,12 @@ function createPromises() {
     amount: { value: amount },
   } = form;
 
+  //check if values === '' or 0
+  if (!+delay || !+step || !+amount) {
+    Notify.warning('pls fill in all filds rigth');
+    return;
+  }
+
   for (let i = 0; i < amount; i += 1) {
     const stepDelay = +delay + step * i;
     createPromise(i + 1, stepDelay)
